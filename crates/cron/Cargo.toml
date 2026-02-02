@@ -1,0 +1,23 @@
+[package]
+name = "opensam-cron"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+opensam-bus = { path = "../bus" }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+uuid = { workspace = true }
+dirs = { workspace = true }
+cron-parser = "0.4"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3"

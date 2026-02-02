@@ -1,0 +1,22 @@
+[package]
+name = "opensam-channels"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+opensam-bus = { path = "../bus" }
+opensam-config = { path = "../config" }
+
+async-trait = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+
+# Telegram
+teloxide = { workspace = true }
+
+[dev-dependencies]
+tokio-test = "0.4"

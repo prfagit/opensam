@@ -1,0 +1,33 @@
+[package]
+name = "opensam-agent"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+opensam-bus = { path = "../bus" }
+opensam-provider = { path = "../provider" }
+opensam-config = { path = "../config" }
+opensam-session = { path = "../session" }
+
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+regex = { workspace = true }
+reqwest = { workspace = true }
+scraper = { workspace = true }
+html2text = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+dirs = { workspace = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3"
+mockito = "1"
+mockall = "0.12"
+async-trait = { workspace = true }

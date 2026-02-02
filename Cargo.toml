@@ -1,0 +1,70 @@
+[workspace]
+members = [
+    "crates/opensam",
+    "crates/config",
+    "crates/bus",
+    "crates/provider",
+    "crates/agent",
+    "crates/session",
+    "crates/channels",
+    "crates/cron",
+    "crates/heartbeat",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["OpenSAM Contributors"]
+license = "MIT"
+repository = "https://github.com/prfagit/opensam"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+tokio-util = "0.7"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Time
+tokio-cron-scheduler = "0.9"
+chrono = "0.4"
+
+# Config
+dirs = "5.0"
+
+# Telegram
+teloxide = { version = "0.12", features = ["macros"] }
+
+# Regex
+regex = "1.10"
+
+# HTML parsing
+scraper = "0.18"
+html2text = "0.12"
+
+# UUID
+uuid = { version = "1.6", features = ["v4"] }
+
+# Async traits
+async-trait = "0.1"
+
+# Cron parsing
+cron-parser = "0.4"
